@@ -1,0 +1,9 @@
+# Eureka Server related configuration so that our client communicate with eureka service registry server
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${ORDER_SERVICE:http://localhost:8761/eureka/}
